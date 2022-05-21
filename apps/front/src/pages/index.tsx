@@ -1,28 +1,26 @@
-import { GetServerSideProps, NextPage } from "next"
-import axiosClient from "../config/clients/AxiosClient"
+import { NextPage } from "next"
+import Home from "../presentation/screens/Home"
 
 type Props = {
     data: any
 }
 
-const Home: NextPage<Props> = ({ data }) => {
-    return (
-        <h1>Hello World</h1>
-    )
+const HomePage: NextPage<Props> = ({ data }) => {
+    return <Home />
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    const { data } = await axiosClient.get('/', {
-        params: {
-            url: ''
-        }
-    })
+// export const getServerSideProps: GetServerSideProps = async (ctx) => {
+//     // const { data } = await axiosClient.get('/', {
+//     //     params: {
+//     //         url: ''
+//     //     }
+//     // })
 
-    return {
-        props: {
-            data
-        }
-    }
-}
+//     return {
+//         props: {
+//             // data
+//         }
+//     }
+// }
 
-export default Home
+export default HomePage
