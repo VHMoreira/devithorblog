@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import Home from "../presentation/screens/Home"
+import Home from "@/presentation/screens/Home"
 
 type Props = {
     data: any
