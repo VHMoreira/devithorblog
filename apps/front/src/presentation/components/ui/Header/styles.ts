@@ -13,7 +13,7 @@ type NavItemProps = {
 export const Header = styled.header`
     width: 100%;
     height: 70px;
-    background-color: #67678A;
+    background-color: var(--principal-color);
     display: grid;
     grid-template-columns: minmax(100px, 200px) repeat(5, 1fr);
     grid-template-areas: 
@@ -42,11 +42,27 @@ export const Navbar = styled.nav`
 `
 
 export const NavItem = styled.a<NavItemProps>`
-    color: #FEFEFE;
+    color: var(--light-color);
+    opacity: 0.7;
     font-size: 20px;
+    width: 75px;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+
+
+    &:after{
+        display: block;
+        content: '';
+        transition: transform 250ms ease-in-out;
+        ${({ selected }) => selected
+        ? css`transform: scaleX(1)`
+        : css`transform: scaleX(0)`
+    };  
+        border-bottom: 2px solid var(--secondary-color);
+    }
 
     ${({ selected }) => selected && css`
+        opacity: 1;
         font-weight: bold;
-        color: #BEAA63;
     `}
 `

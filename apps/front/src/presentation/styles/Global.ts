@@ -1,6 +1,17 @@
 import { createGlobalStyle } from "styled-components"
 
 const globalStyle = createGlobalStyle`
+    :root {
+        --principal-color: #02023D;
+        --principal-light-color: #8A8AF2;
+        --principal-dark-color: #02023D;
+        --secondary-color: #C7A941;
+        --secondary-light-color: #FBDB6D;
+        --secondary-dark-color: #6D5707;
+        --dark-color: #3C3C3C;
+        --light-color: #FEFEFE;
+    }
+
     @font-face {
         font-family: roboto;
         src: url("/fonts/Roboto-Black.ttf");
