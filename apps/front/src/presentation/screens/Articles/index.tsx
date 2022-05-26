@@ -1,8 +1,11 @@
-import { Title } from "./styles"
+import { Header } from "@/presentation/components"
+import { Root } from "./styles"
 
 const Articles: React.FC = () => {
     return (
-        <Title>Articles</Title>
+        <Root>
+            <Header />
+        </Root>
     )
 }
 
