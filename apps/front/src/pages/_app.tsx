@@ -2,8 +2,9 @@ import { NextPage } from "next"
 import { AppProps } from "next/app"
 import GlobalStyle from "@/presentation/styles/Global"
 import Head from "next/head"
+import { DefaultLayout } from "@/presentation/layout"
 
-const App: NextPage<AppProps> = ({ Component, pageProps }) => {
+const App: NextPage<AppProps> = ({ Component, pageProps, }) => {
     return (
         <>
             <Head>
@@ -12,7 +13,9 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
                 <title>DEVTHOR | Front-end</title>
             </Head>
             <GlobalStyle />
-            <Component {...pageProps} />
+            <DefaultLayout>
+                <Component {...pageProps} />
+            </DefaultLayout>
         </>
     )
 }
