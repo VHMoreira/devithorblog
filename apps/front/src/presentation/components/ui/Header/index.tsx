@@ -1,7 +1,12 @@
 import { LogoWhite } from "@/presentation/components/ui/Icons"
+import Link from "next/link"
 import { Header, LogoArea, Navbar, NavbarArea, NavItem } from "./styles"
 
-const HeaderUI: React.FC = () => {
+type Props = {
+    page: 'home' | 'about' | 'articles' | 'videos'
+}
+
+const HeaderUI: React.FC<Props> = ({ page }) => {
     return (
         <Header>
             <LogoArea>
@@ -9,10 +14,26 @@ const HeaderUI: React.FC = () => {
             </LogoArea>
             <NavbarArea>
                 <Navbar>
-                    <NavItem href='/'>Home</NavItem>
-                    <NavItem href='/about'>About</NavItem>
-                    <NavItem href='/articles'>Articles</NavItem>
-                    <NavItem href='/videos'>Videos</NavItem>
+                    <Link href='/'>
+                        <NavItem selected={page === 'home'}>
+                            Home
+                        </NavItem>
+                    </Link>
+                    <Link href='/about'>
+                        <NavItem selected={page === 'about'}>
+                            About
+                        </NavItem>
+                    </Link>
+                    <Link href='/articles'>
+                        <NavItem selected={page === 'articles'}>
+                            Articles
+                        </NavItem>
+                    </Link>
+                    <Link href='/videos'>
+                        <NavItem selected={page === 'videos'}>
+                            Videos
+                        </NavItem>
+                    </Link>
                 </Navbar>
             </NavbarArea>
         </Header>

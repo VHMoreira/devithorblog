@@ -25,6 +25,11 @@ const globalStyle = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
     }
+
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
 `
 
 export default globalStyle

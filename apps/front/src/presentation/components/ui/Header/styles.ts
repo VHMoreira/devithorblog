@@ -44,7 +44,6 @@ export const Navbar = styled.nav`
 export const NavItem = styled.a<NavItemProps>`
     color: #FEFEFE;
     font-size: 20px;
-    text-decoration: none;
 
     ${({ selected }) => selected && css`
         font-weight: bold;
