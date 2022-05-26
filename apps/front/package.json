@@ -8,7 +8,8 @@
     "build:svgs": "npx @svgr/cli -d src/presentation/components/ui/Icons src/assets/icons --typescript --icon --ref",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest --watch --passWithNoTests",
+    "test:coverage": "jest --passWithNoTests --coverage --watchAll"
   },
   "dependencies": {
     "axios": "^0.27.2",
