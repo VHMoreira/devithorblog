@@ -10,6 +10,7 @@ const globalStyle = createGlobalStyle`
         --secondary-dark-color: #6D5707;
         --dark-color: #3C3C3C;
         --light-color: #FEFEFE;
+        --glass-grey-color: #76767670;
     }
 
     @font-face {

@@ -1,4 +1,4 @@
-import { Header } from "@/presentation/components"
+import { Header, Footer } from "@/presentation/components"
 import { PropsWithChildren } from "react"
 
 const Default: React.FC<PropsWithChildren<any>> = ({ children }) => {
@@ -6,6 +6,7 @@ const Default: React.FC<PropsWithChildren<any>> = ({ children }) => {
         <>
             <Header />
             {children}
+            <Footer />
         </>
     )
 }
