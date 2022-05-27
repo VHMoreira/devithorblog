@@ -27,10 +27,11 @@ export const Copyright = styled.p`
     color: var(--light-color);
     font-size: 20px;
     opacity: 0.4;
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 250ms ease-in-out, color 250ms ease-in-out;
 
     &:hover{
         opacity: 1;
+        color: var(--secondary-color);
     }
 `
 
