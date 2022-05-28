@@ -16,13 +16,11 @@ export const Wrapper = styled.div`
 export const ContentArea = styled.div`
     grid-area: ${WrapperAreas.CONTENT};
     background-color: var(--principal-color);
-    position: relative;
 `
 
 export const NavigatorArea = styled.div`
     grid-area: ${WrapperAreas.NAVIGATOR};
     background-color: var(--principal-color);
-
 `
 
 export const SideNavbar = styled.nav`

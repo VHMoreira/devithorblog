@@ -26,7 +26,7 @@ const SideNavigatorUI: React.FC<PropsWithChildren<Props>> = ({ children, navItem
             <NavigatorArea>
                 <SideNavbar>
                     {navItems.map(({ href, label }) => (
-                        <Link href={href}>
+                        <Link key={href} href={href}>
                             <NavItem>{label}</NavItem>
                         </Link>
                     ))}
