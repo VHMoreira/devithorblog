@@ -11,13 +11,19 @@ enum WelcomeAreas {
 
 export const Welcome = styled.section`
     width: 100%;
-    height: 100vh;
 
     background-color: var(--principal-color);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
         '${WelcomeAreas.IMAGE} ${WelcomeAreas.IMAGE} ${WelcomeAreas.IMAGE} ${WelcomeAreas.INTRO} ${WelcomeAreas.INTRO}';
+
+    @media screen and (max-width: 800px){
+        grid-template-columns: auto;
+        grid-template-areas: 
+        '${WelcomeAreas.IMAGE}' 
+        '${WelcomeAreas.INTRO}';
+    }
 `
 
 export const WelcomeImageArea = styled.article`
@@ -52,14 +58,14 @@ export const TextWrapper = styled.article`
 `
 
 export const IntroTitle = styled.h1`
-    font-size: 60px;
+    font-size: 3.5rem;
     white-space: pre-wrap;
     color: var(--light-color);
 `
 
 export const IntroSubtitle = styled.h4`
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 1.75rem;
     white-space: pre-wrap;
     color: var(--light-color);
 `
