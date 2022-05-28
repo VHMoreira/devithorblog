@@ -1,7 +1,7 @@
 import { FooterUI } from "@/presentation/components/ui"
 import { useMemo } from "react"
 
-const HeaderController: React.FC = () => {
+const FooterController: React.FC = () => {
     const year = useMemo(() => {
         const date = new Date()
         return date.getFullYear()
@@ -10,4 +10,4 @@ const HeaderController: React.FC = () => {
     return <FooterUI year={year} />
 }
 
-export default HeaderController
+export default FooterController

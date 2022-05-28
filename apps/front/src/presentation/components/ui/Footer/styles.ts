@@ -15,12 +15,24 @@ export const Footer = styled.footer`
     grid-template-columns: minmax(200px, 300px) repeat(5, 1fr);
     grid-template-areas: 
         '${FooterAreas.COPYRIGHT} ${FooterAreas.EMPTY} ${FooterAreas.EMPTY} ${FooterAreas.EMPTY} ${FooterAreas.SOCIAL_LINKS} ${FooterAreas.SOCIAL_LINKS}';
+
+    @media screen and (max-width: 800px){
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+                '${FooterAreas.SOCIAL_LINKS}'
+                '${FooterAreas.COPYRIGHT}';
+    }
 `
 
 export const CopyrightArea = styled.div`
     grid-area: ${FooterAreas.COPYRIGHT};
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 800px){
+        justify-content: center;
+    }
 `
 
 export const Copyright = styled.p`
@@ -48,7 +60,11 @@ export const SocialNavbar = styled.nav`
     height: 100%;
     align-items: center;
     justify-content: flex-end;
-    gap: 20px
+    gap: 20px;
+
+    @media screen and (max-width: 800px){
+        justify-content: center;
+    }
 `
 
 export const SocialLink = styled.a`
