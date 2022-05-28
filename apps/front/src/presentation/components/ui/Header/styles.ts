@@ -11,6 +11,10 @@ type NavItemProps = {
 }
 
 export const Header = styled.header`
+    position: sticky;
+    top: 0;
+    margin-top: 15px;
+    z-index: 1;
     width: 100%;
     height: 70px;
     background-color: var(--principal-color);
@@ -18,6 +22,16 @@ export const Header = styled.header`
     grid-template-columns: minmax(100px, 200px) repeat(5, 1fr);
     grid-template-areas: 
         '${HeaderAreas.LOGO} ${HeaderAreas.EMPTY} ${HeaderAreas.EMPTY} ${HeaderAreas.NAVBAR} ${HeaderAreas.NAVBAR} ${HeaderAreas.NAVBAR}';
+
+    &::before{
+        content: '';
+        width: 100%;
+        height: 15px;
+        top: 0;
+        position: fixed;
+        background-color: var(--principal-color);
+        overflow: visible;
+    }
 `
 
 export const LogoArea = styled.div`
