@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Header, LogoArea, Navbar, NavbarArea, NavItem } from "./styles"
 
 type Props = {
-    page: 'home' | 'about' | 'articles' | 'videos'
+    page: 'home' | 'articles' | 'videos'
 }
 
 const HeaderUI: React.FC<Props> = ({ page }) => {
@@ -17,11 +17,6 @@ const HeaderUI: React.FC<Props> = ({ page }) => {
                     <Link href='/'>
                         <NavItem selected={page === 'home'}>
                             Home
-                        </NavItem>
-                    </Link>
-                    <Link href='/about'>
-                        <NavItem selected={page === 'about'}>
-                            About
                         </NavItem>
                     </Link>
                     <Link href='/articles'>
