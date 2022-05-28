@@ -10,7 +10,12 @@ export const Wrapper = styled.div`
     height: 200vh;
     display: grid;
     grid-template-columns: 1fr 100px;
-    grid-template-areas: '${WrapperAreas.CONTENT} ${WrapperAreas.NAVIGATOR}'
+    grid-template-areas: '${WrapperAreas.CONTENT} ${WrapperAreas.NAVIGATOR}';
+
+    @media screen and (max-width: 800px){
+        grid-template-columns:auto;
+        grid-template-areas: '${WrapperAreas.CONTENT}';
+    }
 `
 
 export const ContentArea = styled.div`
