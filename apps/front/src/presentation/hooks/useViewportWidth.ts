@@ -1,15 +1,19 @@
-import { useCallback, useState } from "react"
-const browser = typeof window !== undefined
+import { useCallback, useEffect, useState } from "react"
 
 const useViewportWidth = () => {
-    const [width, setWidth] = useState(browser ? window.innerWidth : 0)
+    const [width, setWidth] = useState(0)
 
     const setSize = useCallback(() => {
         setWidth(window.innerWidth || 0)
     }, [])
 
-    window.addEventListener('resize', setSize, { passive: true })
-    window.addEventListener('orientationchange', setSize, { passive: true })
+    useEffect(() => {
+        if (typeof window !== undefined) {
+            window.addEventListener('resize', setSize, { passive: true })
+            window.addEventListener('orientationchange', setSize, { passive: true })
+        }
+    }, [])
+
 
     return width
 }
