@@ -1,3 +1,4 @@
+import { SideNavigator } from "@/presentation/components"
 import {
     AccentText,
     IntroSubtitle,
@@ -28,6 +29,26 @@ const Home: React.FC = () => {
                     </TextWrapper>
                 </WelcomeIntroArea>
             </Welcome>
+            <SideNavigator
+                navItems={[
+                    {
+                        href: '/#about',
+                        label: 'About'
+                    },
+                    {
+                        href: '/#projects',
+                        label: 'Projects'
+                    },
+                    {
+                        href: '/#contacts',
+                        label: 'Contacts'
+                    }
+                ]}
+            >
+                <div id="projects"></div>
+                <div id="about"></div>
+                <div id="contacts"></div>
+            </SideNavigator>
         </Root>
     )
 }
