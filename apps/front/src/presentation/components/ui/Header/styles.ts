@@ -52,7 +52,7 @@ export const Navbar = styled.nav`
     height: 100%;
     align-items: center;
     justify-content: flex-end;
-    gap: 20px
+    gap: 20px;
 `
 
 export const NavItem = styled.a<NavItemProps>`
