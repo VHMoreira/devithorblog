@@ -62,6 +62,11 @@ export const NavItem = styled.a<NavItemProps>`
     width: 75px;
     text-align: center;
     border-bottom: 2px solid transparent;
+    transition: opacity 250ms ease-in-out;
+
+    &:hover{
+        opacity: 1;
+    }
 
 
     &:after{
