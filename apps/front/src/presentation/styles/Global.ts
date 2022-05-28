@@ -2,9 +2,9 @@ import { createGlobalStyle } from "styled-components"
 
 const globalStyle = createGlobalStyle`
     :root {
-        --principal-color: #02023D;
+        --principal-color: #07071c;
         --principal-light-color: #8A8AF2;
-        --principal-dark-color: #02023D;
+        --principal-dark-color: #07071c;
         --secondary-color: #C7A941;
         --secondary-light-color: #FBDB6D;
         --secondary-dark-color: #6D5707;
@@ -33,6 +33,7 @@ const globalStyle = createGlobalStyle`
     
     *{
         font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-weight: 500;
         padding: 0;
         margin: 0;
         box-sizing: border-box;
