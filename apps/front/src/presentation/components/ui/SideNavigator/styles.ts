@@ -26,6 +26,10 @@ export const ContentArea = styled.div`
 export const NavigatorArea = styled.div`
     grid-area: ${WrapperAreas.NAVIGATOR};
     background-color: var(--principal-color);
+    
+    @media screen and (max-width: 800px){
+        display: none;
+    }
 `
 
 export const SideNavbar = styled.nav`

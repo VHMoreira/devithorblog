@@ -15,26 +15,23 @@ type NavItem = {
 
 type Props = {
     navItems: NavItem[]
-    isMobile?: boolean
 }
 
-const SideNavigatorUI: React.FC<PropsWithChildren<Props>> = ({ children, navItems, isMobile }) => {
+const SideNavigatorUI: React.FC<PropsWithChildren<Props>> = ({ children, navItems }) => {
     return (
         <Wrapper>
             <ContentArea>
                 {children}
             </ContentArea>
-            {!isMobile ? (
-                <NavigatorArea>
-                    <SideNavbar>
-                        {navItems.map(({ href, label }) => (
-                            <Link key={href} href={href}>
-                                <NavItem>{label}</NavItem>
-                            </Link>
-                        ))}
-                    </SideNavbar>
-                </NavigatorArea>
-            ) : null}
+            <NavigatorArea>
+                <SideNavbar>
+                    {navItems.map(({ href, label }) => (
+                        <Link key={href} href={href}>
+                            <NavItem>{label}</NavItem>
+                        </Link>
+                    ))}
+                </SideNavbar>
+            </NavigatorArea>
         </Wrapper>
     )
 }

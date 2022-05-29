@@ -1,20 +1,19 @@
-import { LogoWhite } from "@/presentation/components/ui/Icons"
+import { LogoWhite, MenuIcon } from "@/presentation/components/ui/Icons"
 import Link from "next/link"
-import { Header, LogoArea, Navbar, NavbarArea, NavItem } from "./styles"
+import { Header, IconButton, LogoArea, Navbar, NavbarArea, NavItem } from "./styles"
 
 type Props = {
     page: 'home' | 'articles' | 'videos'
-    isMobile?: boolean
 }
 
-const HeaderUI: React.FC<Props> = ({ page, isMobile }) => {
+const HeaderUI: React.FC<Props> = ({ page }) => {
     return (
         <Header>
             <LogoArea>
                 <LogoWhite width="100%" height="100%" />
             </LogoArea>
             <NavbarArea>
-                {!isMobile ? <Navbar>
+                <Navbar>
                     <Link href='/'>
                         <NavItem selected={page === 'home'}>
                             Home
@@ -30,7 +29,10 @@ const HeaderUI: React.FC<Props> = ({ page, isMobile }) => {
                             Videos
                         </NavItem>
                     </Link>
-                </Navbar> : "MenuMobile"}
+                </Navbar>
+                <IconButton>
+                    <MenuIcon />
+                </IconButton>
             </NavbarArea>
         </Header>
     )

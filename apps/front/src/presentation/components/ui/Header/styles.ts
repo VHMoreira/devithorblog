@@ -44,15 +44,21 @@ export const LogoArea = styled.div`
 export const NavbarArea = styled.div`
     grid-area: ${HeaderAreas.NAVBAR};
     padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
 `
 
 export const Navbar = styled.nav`
     display: inline-flex;
-    width: 100%;
     height: 100%;
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
+
+    @media screen and (max-width: 800px){
+        display: none;
+    }
 `
 
 export const NavItem = styled.a<NavItemProps>`
@@ -84,4 +90,26 @@ export const NavItem = styled.a<NavItemProps>`
         opacity: 1;
         font-weight: bold;
     `}
+`
+
+export const IconButton = styled.button`
+    display: flex;
+    width: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    
+    svg{
+        width: 50px;
+        height: 50px;
+        fill: var(--light-color);
+    }
+
+    p{
+        flex: 1;
+    }
+
+    @media screen and (min-width: 800px){
+        display: none;
+    }
 `
