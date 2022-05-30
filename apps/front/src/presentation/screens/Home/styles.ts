@@ -56,20 +56,3 @@ export const TextWrapper = styled.article`
     max-width: 600px;
     min-width: 300px;
 `
-
-export const IntroTitle = styled.h1`
-    font-size: 3.5rem;
-    white-space: pre-wrap;
-    color: var(--light-color);
-`
-
-export const IntroSubtitle = styled.h4`
-    margin-top: 10px;
-    font-size: 1.75rem;
-    white-space: pre-wrap;
-    color: var(--light-color);
-`
-
-export const AccentText = styled.span`
-    color: var(--secondary-color);
-`
