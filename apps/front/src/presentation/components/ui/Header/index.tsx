@@ -1,12 +1,16 @@
-import { LogoWhite, MenuIcon } from "@/presentation/components/ui/Icons"
+import { LogoWhite } from "@/presentation/components/ui/Icons"
 import Link from "next/link"
-import { Header, IconButton, LogoArea, Navbar, NavbarArea, NavItem } from "./styles"
+import { MenuMobileUI } from "@/presentation/components/ui"
+import { Header, LogoArea, Navbar, NavbarArea, NavItem } from "./styles"
 
 type Props = {
     page: 'home' | 'articles' | 'videos'
+    isOpen: boolean
+    onClose: () => void
+    onOpen: () => void
 }
 
-const HeaderUI: React.FC<Props> = ({ page }) => {
+const HeaderUI: React.FC<Props> = ({ isOpen, page, onClose, onOpen }) => {
     return (
         <Header>
             <LogoArea>
@@ -30,9 +34,7 @@ const HeaderUI: React.FC<Props> = ({ page }) => {
                         </NavItem>
                     </Link>
                 </Navbar>
-                <IconButton>
-                    <MenuIcon />
-                </IconButton>
+                <MenuMobileUI isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
             </NavbarArea>
         </Header>
     )

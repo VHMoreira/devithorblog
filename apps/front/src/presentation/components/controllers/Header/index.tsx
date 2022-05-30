@@ -1,11 +1,12 @@
 import { HeaderUI } from "@/presentation/components/ui"
 import { useRouter } from "next/router"
-import { useMemo } from "react"
+import { useCallback, useMemo, useState } from "react"
 
 type Pages = 'home' | 'articles' | 'videos'
 
 const HeaderController: React.FC = () => {
     const { route } = useRouter()
+    const [openMenuMobile, setOpenMenuMobile] = useState(false)
 
     const getSelectedNavItem = useMemo((): Pages => {
         if (route === '/articles') {
@@ -19,7 +20,20 @@ const HeaderController: React.FC = () => {
         return 'home'
     }, [route])
 
-    return <HeaderUI page={getSelectedNavItem} />
+    const handleCloseMobileMenu = useCallback(() => {
+        setOpenMenuMobile(false)
+    }, [])
+
+    const handleOpenMobileMenu = useCallback(() => {
+        setOpenMenuMobile(true)
+    }, [])
+
+    return <HeaderUI
+        page={getSelectedNavItem}
+        isOpen={openMenuMobile}
+        onClose={handleCloseMobileMenu}
+        onOpen={handleOpenMobileMenu}
+    />
 }
 
 export default HeaderController

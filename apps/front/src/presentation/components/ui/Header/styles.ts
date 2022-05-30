@@ -91,25 +91,3 @@ export const NavItem = styled.a<NavItemProps>`
         font-weight: bold;
     `}
 `
-
-export const IconButton = styled.button`
-    display: flex;
-    width: auto;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: transparent;
-    
-    svg{
-        width: 50px;
-        height: 50px;
-        fill: var(--light-color);
-    }
-
-    p{
-        flex: 1;
-    }
-
-    @media screen and (min-width: 800px){
-        display: none;
-    }
-`
