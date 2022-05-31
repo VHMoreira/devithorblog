@@ -1,4 +1,4 @@
-import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "@/presentation/components/ui/Icons"
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/presentation/components/ui/Icons"
 import { Copyright, CopyrightArea, Footer, SocialLink, SocialNavbar, SocialNavigationArea } from "./styles"
 
 type Props = {
@@ -18,9 +18,6 @@ const FooterUI: React.FC<Props> = ({ year }) => {
                     </SocialLink>
                     <SocialLink target="_blank" href="https://www.linkedin.com/in/vhmoreiras">
                         <LinkedinIcon />
-                    </SocialLink>
-                    <SocialLink target="_blank" href="https://www.instagram.com/vhmoreir">
-                        <InstagramIcon />
                     </SocialLink>
                     <SocialLink target="_blank" href="https://github.com/VHMoreira">
                         <GithubIcon />
