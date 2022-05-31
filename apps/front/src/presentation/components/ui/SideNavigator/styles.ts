@@ -7,7 +7,6 @@ enum WrapperAreas {
 
 export const Wrapper = styled.div`
     width: 100%;
-    height: 200vh;
     display: grid;
     grid-template-columns: 1fr 100px;
     grid-template-areas: '${WrapperAreas.CONTENT} ${WrapperAreas.NAVIGATOR}';

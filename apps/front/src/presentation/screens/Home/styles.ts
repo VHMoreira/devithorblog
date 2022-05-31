@@ -45,7 +45,6 @@ export const WelcomeImage = styled.img`
 export const WelcomeIntroArea = styled.aside`
     grid-area: ${WelcomeAreas.INTRO};
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +66,7 @@ export const About = styled.section`
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
         '${AboutAreas.TITLE} ${AboutAreas.EMPTY} ${AboutAreas.EMPTY} ${AboutAreas.EMPTY} ${AboutAreas.EMPTY}'
-        '${AboutAreas.IMAGE} ${AboutAreas.IMAGE} ${AboutAreas.TEXT} ${AboutAreas.TEXT} ${AboutAreas.TEXT}';
+        '${AboutAreas.IMAGE} ${AboutAreas.TEXT} ${AboutAreas.TEXT} ${AboutAreas.TEXT} ${AboutAreas.TEXT}';
 
     @media screen and (max-width: 800px){
         grid-template-columns: auto;
@@ -81,7 +80,6 @@ export const About = styled.section`
 export const AboutTitleArea = styled.article`
     grid-area: ${AboutAreas.TITLE};
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
 `
@@ -96,13 +94,16 @@ export const SectionTitle = styled.h2`
 export const AboutImageArea = styled.article`
     grid-area: ${AboutAreas.IMAGE};
     width: 100%;
-    height: 100%;
-    display: flex;
 `
 
 export const AboutImage = styled.img`
-    width: 100%;
+    min-width: 200px;
+    max-width: 100%;
     border-radius: 10px;
+
+    @media screen and (max-width: 800px){
+        width: 100%;
+    }
 `
 
 export const AboutTextArea = styled.aside`
@@ -112,10 +113,14 @@ export const AboutTextArea = styled.aside`
     padding: 0 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     @media screen and (max-width: 800px){
         margin-top: 20px;
         padding: 0;
     }
+`
+
+export const TextWrapper = styled.article`
+    margin: 20px 0 30px 0;
+    width: 100%;
 `
